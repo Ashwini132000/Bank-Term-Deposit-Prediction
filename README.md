@@ -184,30 +184,36 @@ Used `pd.get_dummies()` for nominal features like `job`, `marital`, `education`,
 
 ---  
 
-## 🔑 Key Findings
+## 🔚 Conclusion
 
-**🔹Best Performing Model**  
-The **Gradient Boosting Classifier** achieved the best performance with an **F1-Score of 0.57**, demonstrating a good balance between precision and recall for predicting term deposit subscriptions.
+### 🔚 Conclusion
 
-**🔹Model Accuracy & AUC**  
-  - **Test Accuracy**: 90.25%  
-  - **AUC-ROC**: 0.9279  
-  These metrics indicate that the model generalizes well and effectively distinguishes between subscribed and non-subscribed clients.
+The goal of this project was to build a robust classification model to predict whether a client will subscribe to a term deposit, based on their demographic and campaign-related features.
 
-**🔹Most Influential Features**  
-  The following features had the highest impact on predictions:
-  - `duration` – 43% importance  
-  - `poutcome` (outcome of previous campaign) – 14%  
-  - `housing` (housing loan status) – 10%  
-  - `previous` (number of previous contacts)
+### 📌 Summary of Key Steps & Findings:
 
-**🔹Imbalanced Data Handling**  
-  Applied **SMOTE (Synthetic Minority Oversampling Technique)** on the training data to address class imbalance and improve model performance for the minority class.
+- **Data Quality:**  
+  - The dataset was clean with no missing values.  
+  - Outliers were handled using clipping and log transformation.  
+  - Numerical features were standardized using **StandardScaler**.
 
-**🔹Feature Engineering & Scaling**  
-  - No missing values were present in the dataset.  
-  - Outliers were treated using clipping and log transformation.  
-  - **StandardScaler** was used to standardize numerical features, ensuring zero mean and unit variance.
+- **Class Imbalance Handling:**  
+  - Applied **SMOTE** to balance the minority class and improve model sensitivity to term deposit subscriptions.
+
+- **Model Selection & Performance:**  
+  - Among various models, the **Gradient Boosting Classifier** performed best:
+    - **F1-Score:** 0.57 (balanced precision and recall)  
+    - **Test Accuracy:** 90.25%  
+    - **AUC-ROC:** 0.9279 (excellent class separation)
+
+- **Most Influential Features:**  
+  - `duration` (call duration) – **43%**  
+  - `poutcome` (previous campaign outcome) – **14%**  
+  - `housing` (loan status) – **10%**  
+  - `previous` (number of contacts) – moderate impact
+
+### 🎯 Final Outcome:
+The final model shows strong predictive power and can be reliably used to identify potential clients who are likely to subscribe to a term deposit. It balances class performance through SMOTE and achieves high AUC, making it suitable for targeted marketing or customer retention strategies.
 
 ---  
 
