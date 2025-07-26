@@ -186,8 +186,6 @@ Used `pd.get_dummies()` for nominal features like `job`, `marital`, `education`,
 
 ## 🔚 Conclusion
 
-### 🔚 Conclusion
-
 The goal of this project was to build a robust classification model to predict whether a client will subscribe to a term deposit, based on their demographic and campaign-related features.
 
 ### 📌 Summary of Key Steps & Findings:
